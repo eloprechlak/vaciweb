@@ -1,45 +1,17 @@
-// Usuário e senha fixos
-const usuarioValido = {
-    email: "adm@gmail.com", // email definido
-    senha: "123"           // senha definida
-};
-
-// Função de validação
-function validarLogin(event) {
-    event.preventDefault(); // evita que o formulário envie
-
-    const emailInput = document.getElementById("username").value;
-    const senhaInput = document.getElementById("senhaLogin").value;
-
-    if(emailInput === usuarioValido.email && senhaInput === usuarioValido.senha) {
-        alert("Login realizado com sucesso!");
-        window.location.href = "principal.html"; // redireciona para a página principal
-    } else {
-        alert("Email ou senha incorretos!");
-    }
-}
-
-// Adiciona o evento submit ao formulário
-document.getElementById("loginForm").addEventListener("submit", validarLogin);
-
-
-
-
-
 // =======================
-
 // 🧭 NAVEGAÇÃO ENTRE TELAS
 // =======================
-function irParaLogin() { window.location.href = "./login.html"; }
-function goHome() { window.location.href = "./index.html"; }
-function irParaPrincipal() { window.location.href = "./principal.html"; }
-function irParaCadastro() { window.location.href = "./tela_cadastro/cadastro.html"; }
-function irbebe() { window.location.href = "./vacinas/bebe.html"; }
-function irJogo() { window.location.href = "./jogo/jogo.html"; }
-function irParacadastro() { window.location.href = "./tela_cadastro/cadastro.html"; }
-function iradolescente() { window.location.href = "./vacinas/adolecente.html"; }
-function iradulto() { window.location.href = "./vacinas/adultoidoso.html"; }
-function irgestante() { window.location.href = "./vacinas/gestante.html"; }
+function irParaLogin() { window.location.href = "../login/login.html"; }
+function goHome() { window.location.href = "../index.html"; }
+function irParaPrincipal() { window.location.href = "../principal/principal.html"; }
+function irParaCadastro() { window.location.href = "../tela_cadastro/cadastro.html"; }
+function irbebe() { window.location.href = "../vacinas/bebe.html"; }
+function irJogo() { window.location.href = "../jogo/jogo.html"; }
+function irParacadastro() { window.location.href = "../tela_cadastro/cadastro.html"; }
+function iradolescente() { window.location.href = "../vacinas/adolecente.html"; }
+function iradulto() { window.location.href = "../vacinas/adultoidoso.html"; }
+function irgestante() { window.location.href = "../vacinas/gestante.html"; }
+
 // =======================
 // 📚 BOTÃO "SAIBA MAIS"
 // =======================
