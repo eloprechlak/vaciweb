@@ -1,3 +1,30 @@
+// Usuário e senha fixos
+const usuarioValido = {
+    email: "adm@gmail.com", // email definido
+    senha: "123"           // senha definida
+};
+
+// Função de validação
+function validarLogin(event) {
+    event.preventDefault(); // evita que o formulário envie
+
+    const emailInput = document.getElementById("username").value;
+    const senhaInput = document.getElementById("senhaLogin").value;
+
+    if(emailInput === usuarioValido.email && senhaInput === usuarioValido.senha) {
+        alert("Login realizado com sucesso!");
+        window.location.href = "principal.html"; // redireciona para a página principal
+    } else {
+        alert("Email ou senha incorretos!");
+    }
+}
+
+// Adiciona o evento submit ao formulário
+document.getElementById("loginForm").addEventListener("submit", validarLogin);
+
+
+
+
 // =======================
 // 🧭 NAVEGAÇÃO ENTRE TELAS
 // =======================
