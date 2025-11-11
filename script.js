@@ -47,7 +47,7 @@ if (loginForm) {
 // 🧭 NAVEGAÇÃO ENTRE TELAS
 // =======================
 function goHome() { window.location.href = "./index.html"; }
-function irParaLogin() { window.location.href = "./login.html"; }
+function irParaLogin() { window.location.href = "login.html"; }
 function irParaPrincipal() { window.location.href = "./principal.html"; }
 function irParaCadastro() { window.location.href = "./cadastro.html"; }
 function irBebe() { window.location.href = "./bebe.html"; }
