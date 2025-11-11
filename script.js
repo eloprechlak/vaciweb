@@ -1,7 +1,7 @@
 // Usuário e senha fixos
 const usuarioValido = {
     email: "adm@gmail.com", // email definido
-    senha: "123"           // senha definida
+    senha: "123456"           // senha definida
 };
 
 // Função de validação
