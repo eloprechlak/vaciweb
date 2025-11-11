@@ -1,16 +1,16 @@
 // =======================
 // 🧭 NAVEGAÇÃO ENTRE TELAS
 // =======================
-function irParaLogin() { window.location.href = "/login/login.html"; }
-function goHome() { window.location.href = "/index.html"; }
-function irParaPrincipal() { window.location.href = "/principal/principal.html"; }
-function irParaCadastro() { window.location.href = "/tela_cadastro/cadastro.html"; }
-function irbebe() { window.location.href = "/vacinas/bebe.html"; }
-function irJogo() { window.location.href = "/jogo/jogo.html"; }
-function irParacadastro() { window.location.href = "/tela_cadastro/cadastro.html"; }
-function iradolescente() { window.location.href = "/vacinas/adolecente.html"; }
-function iradulto() { window.location.href = "/vacinas/adultoidoso.html"; }
-function irgestante() { window.location.href = "/vacinas/gestante.html"; }
+function irParaLogin() { window.location.href = "./login/login.html"; }
+function goHome() { window.location.href = "./index.html"; }
+function irParaPrincipal() { window.location.href = "./principal/principal.html"; }
+function irParaCadastro() { window.location.href = "./tela_cadastro/cadastro.html"; }
+function irbebe() { window.location.href = "./vacinas/bebe.html"; }
+function irJogo() { window.location.href = "./jogo/jogo.html"; }
+function irParacadastro() { window.location.href = "./tela_cadastro/cadastro.html"; }
+function iradolescente() { window.location.href = "./vacinas/adolecente.html"; }
+function iradulto() { window.location.href = "./vacinas/adultoidoso.html"; }
+function irgestante() { window.location.href = "./vacinas/gestante.html"; }
 // =======================
 // 📚 BOTÃO "SAIBA MAIS"
 // =======================
