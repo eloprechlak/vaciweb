@@ -226,10 +226,6 @@ body{
   .header-inner{padding:0 14px;}
   .hero-stripes .stripe{font-size:16px;padding:12px 14px;}
   .stamp{display:none;}
-  .mascot img{
-    width:80px;
-    height:auto;
-  }
   .hero{
     gap:16px;
     text-align:center;
@@ -237,6 +233,10 @@ body{
   .nav-btn{
     padding:6px 10px;
     font-size:14px;
+  }
+  /* Mascote desaparece no mobile */
+  .mascot{
+    display:none;
   }
 }
 
