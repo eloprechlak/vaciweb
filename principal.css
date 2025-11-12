@@ -279,3 +279,165 @@ footer {
     border-bottom-right-radius: 50% 10%;
     margin-bottom: 40px;
 }
+
+/* RESPONSIVIDADE GERAL */
+
+/* Telas médias (tablets e celulares grandes) */
+@media (max-width: 1024px) {
+
+    .header-content {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo-titulo {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .mascote-container {
+        gap: 32px;
+        padding-left: 20px;
+    }
+
+    .logo-header {
+        height: 140px;
+        width: 140px;
+    }
+
+    .mascote-titulo {
+        font-size: 26px;
+    }
+
+    .mascote-texto-baixo {
+        font-size: 20px;
+        max-width: 700px;
+    }
+
+    .btn-img {
+        width: 160px;
+        height: 230px;
+    }
+
+    #btnJogo {
+        width: 100%;
+        height: 100px;
+    }
+
+    .carousel-container {
+        max-width: 90%;
+        height: 280px;
+    }
+}
+
+/* Telas pequenas (celulares comuns) */
+@media (max-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-titulo {
+        font-size: 22px;
+    }
+
+    button.inicio-btn {
+        font-size: 1rem;
+        padding: 6px 12px;
+        border-radius: 16px;
+    }
+
+    .mascote-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .logo-header {
+        width: 120px;
+        height: 120px;
+    }
+
+    .mascote-titulo {
+        font-size: 24px;
+    }
+
+    .mascote-texto-baixo {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+
+    .botoes-container {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .btn-img {
+        width: 140px;
+        height: 200px;
+    }
+
+    #btnJogo {
+        width: 100%;
+        height: 90px;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+        height: 240px;
+    }
+
+    .texto-descritivo {
+        font-size: 16px;
+        max-width: 90%;
+    }
+}
+
+/* Telas muito pequenas (celulares antigos ou mini telas) */
+@media (max-width: 480px) {
+
+    .logo-titulo {
+        font-size: 20px;
+    }
+
+    button.inicio-btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .mascote-titulo {
+        font-size: 20px;
+    }
+
+    .mascote-texto-baixo {
+        font-size: 16px;
+    }
+
+    .btn-img {
+        width: 120px;
+        height: 170px;
+    }
+
+    .carousel-container {
+        height: 200px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
