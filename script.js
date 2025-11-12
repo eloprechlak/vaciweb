@@ -51,6 +51,7 @@ function iradolescente() { window.location.href = "adolescente.html"; }
 function iradulto() { window.location.href = "adultoidoso.html"; }
 function irgestante() { window.location.href = "gestante.html"; }
 function irJogo() { window.location.href = "jogo.html"; }
+function irParaPrincipal() { window.location.href = "principal.html"; }
 
 // =======================
 // 📚 BOTÃO "SAIBA MAIS"
