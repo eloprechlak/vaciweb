@@ -1,219 +1,256 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-/* ======== GERAL ======== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Open Sans', Arial, sans-serif;
-  background-color: #f4faff;
-  color: #222;
-  overflow-x: hidden;
-}
-
-/* ======== CABEÇALHO ======== */
+/* Cabeçalho */
 header {
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   width: 100%;
+  position: relative;
   background: #3299CC;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  position: sticky;
-  top: 0;
-  z-index: 100;
 }
-
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 20px;
 }
-
 .logo-titulo {
-  font-size: clamp(22px, 2.5vw, 28px);
-  font-family: 'Anton', sans-serif;
-  color: #000;
+  margin: 0;
+  font-size: 28px;
+  color: black;
+  font-family: 'Anton', sans-serif; 
+  text-align: left;
 }
 
-/* ======== NAVEGAÇÃO ======== */
+/* Navegação */
 nav ul {
+  display: flex;
+  justify-content: center;
   list-style: none;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  margin: 0;
 }
-
 nav ul li {
-  margin: 4px 0;
+  margin: 0 10px;
 }
-
-button.cadastre-se,
+button.cadastre-se, 
 button.inicio-btn {
-  background: rgba(0, 74, 173, 0.6);
+  color: black;
+  background: rgba(0, 74, 173, 0.59);
   border: none;
-  border-radius: 20px;
-  padding: 8px 18px;
-  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
-  font-weight: bold;
   cursor: pointer;
-  color: #000;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
-  transition: all 0.2s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: color 0.2s, background 0.2s;
+  gap: 8px;
 }
-
 button.cadastre-se:hover,
 button.inicio-btn:hover {
+  color: white;
   background: #004aad;
-  color: #fff;
-  transform: scale(1.05);
 }
-
 .icon-cadastro {
-  width: clamp(14px, 2vw, 20px);
-  height: auto;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  width: 15px;
+  height: 20px;
 }
 
-/* ======== MASCOTE E TÍTULO ======== */
+/* Mascote + título */
 .mascote-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: clamp(20px, 6vw, 64px);
-  padding: 40px 20px;
-  background: #c4e6f2;
-  border-radius: 30px;
-  max-width: 1200px;
-  margin: 30px auto;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 64px;
+  padding-left: 64px;
 }
-
 .logo-header {
-  width: clamp(100px, 20vw, 180px);
-  height: auto;
+  height: 180px;
+  width: 180px;
   object-fit: contain;
 }
-
 .mascote-titulo {
+  text-align: center;
   font-family: 'Anton', sans-serif;
-  font-size: clamp(22px, 3vw, 32px);
-  text-align: center;
+  font-size: 30px;
   color: #222;
+  font-weight: bold;
+  margin: 40px auto 0 auto;
+  letter-spacing: 1px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.mascote-titulo span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
 .mascote-texto-baixo {
-  font-size: clamp(16px, 2.5vw, 22px);
+  font-size: 25px;
   color: #333;
   text-align: center;
-  margin-top: 10px;
-  line-height: 1.4;
-  max-width: 800px;
+  margin: 40px auto 0 auto;
+  max-width: 1000px;
+  line-height: 1.2;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
 }
 
-/* ======== TEXTOS ======== */
+/* Texto introdutório */
 .texto-intro {
-  font-size: clamp(14px, 2vw, 20px);
-  color: #333;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: black;
+  margin: 20px auto;
   text-align: center;
-  max-width: 900px;
-  margin: 30px auto;
-  line-height: 1.6;
+  font-weight: 400;
+  max-width: 800px;
+  line-height: 1.5;
 }
 
+/* Subtítulo */
 .titulo-secundario {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(18px, 2.5vw, 26px);
+  font-size: 24px;
   color: #0074d9;
+  font-weight: bold;
+  margin: 40px 0 15px 0;
   text-align: center;
-  margin-top: 40px;
 }
 
+/* Texto descritivo */
 .texto-descritivo {
-  font-size: clamp(14px, 1.8vw, 18px);
-  color: #222;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 18px;
+  color: black;
   text-align: center;
-  margin: 15px auto 40px;
+  margin: 0 auto 40px auto;
   max-width: 900px;
   line-height: 1.6;
 }
 
-/* ======== RODAPÉ ======== */
+/* Rodapé */
 footer {
   background-color: #3299CC;
-  color: black;
   text-align: center;
-  padding: 20px;
-  font-size: clamp(12px, 1.8vw, 14px);
+  padding: 15px;
   margin-top: 40px;
-  border-top: 3px solid #0074d9;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: black;
 }
+/* === CORREÇÃO DE RESPONSIVIDADE PARA CELULAR === */
+@media (max-width: 600px) {
+  html, body {
+    overflow-x: hidden; /* Impede o texto de ultrapassar a tela */
+    width: 100%;
+  }
 
-/* ======== RESPONSIVIDADE ======== */
-@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+
   .header-content {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .logo-titulo {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
     gap: 10px;
   }
 
   .mascote-container {
     flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .mascote-titulo {
-    font-size: 24px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-content {
-    padding: 12px;
-  }
-
-  .mascote-container {
-    border-radius: 20px;
-    padding: 30px 10px;
-  }
-
-  button.cadastre-se,
-  button.inicio-btn {
-    padding: 6px 12px;
-    font-size: 0.9rem;
+    padding: 0 10px;
+    gap: 20px;
+    margin: 20px 0;
   }
 
   .logo-header {
-    width: 100px;
+    width: 130px;
+    height: 130px;
   }
 
   .mascote-titulo {
     font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    padding: 0 10px;
+    word-wrap: break-word;
   }
 
   .mascote-texto-baixo {
     font-size: 16px;
+    line-height: 1.4;
+    margin: 10px;
+    padding: 0 10px;
+    text-align: center;
+    max-width: 100%;
+    word-wrap: break-word;
   }
 
   .texto-intro,
   .texto-descritivo {
+    font-size: 16px;
+    margin: 10px auto;
     padding: 0 10px;
+    max-width: 100%;
+    line-height: 1.5;
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .titulo-secundario {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  button.cadastre-se,
+  button.inicio-btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    width: 90%;
+    justify-content: center;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 10px;
+    word-wrap: break-word;
+  }
+}
+
+/* --- Desktops grandes (acima de 1200px) --- */
+@media (min-width: 1200px) {
+  .header-content {
+    padding: 20px 40px;
   }
 }
