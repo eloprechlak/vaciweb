@@ -46,6 +46,7 @@ if (loginForm) {
 // =======================
 // 🧭 NAVEGAÇÃO ENTRE TELAS
 // =======================
+function goHome() { window.location.href = "index.html"; }
 function irbebe() { window.location.href = "bebe.html"; }
 function iradolescente() { window.location.href = "adolescente.html"; } 
 function iradulto() { window.location.href = "adultoidoso.html"; }
