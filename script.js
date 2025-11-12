@@ -53,6 +53,7 @@ function iradulto() { window.location.href = "adultoidoso.html"; }
 function irgestante() { window.location.href = "gestante.html"; }
 function irJogo() { window.location.href = "jogo.html"; }
 function irParaPrincipal() { window.location.href = "principal.html"; }
+function irParaLogin() { window.location.href = "login.html"; }
 
 // =======================
 // 📚 BOTÃO "SAIBA MAIS"
