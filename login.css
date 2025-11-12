@@ -9,16 +9,18 @@
 
 body {
     background: linear-gradient(135deg, #1e90ff, #4facfe);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px; /* garante espaço em telas pequenas */
 }
 
 /* Caixa principal */
 .div_caixa {
     background: #fff;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     border-radius: 20px;
     padding: 40px 30px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -28,7 +30,7 @@ body {
 /* Título */
 h1 {
     color: #1e90ff;
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: 20px;
     font-weight: 600;
 }
@@ -41,6 +43,7 @@ label {
     margin-top: 10px;
     margin-bottom: 5px;
     color: #333;
+    font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 input[type="text"],
@@ -49,7 +52,7 @@ input[type="password"] {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     margin-bottom: 15px;
     transition: 0.3s;
 }
@@ -66,7 +69,7 @@ input[type="password"]:focus {
     padding: 12px;
     background-color: #1e90ff;
     color: #fff;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 600;
     border: none;
     border-radius: 10px;
@@ -80,7 +83,7 @@ input[type="password"]:focus {
 
 /* Título cadastro */
 h2 {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     margin: 20px 0 10px;
     color: #333;
 }
@@ -93,7 +96,7 @@ h2 {
     color: #1e90ff;
     border: 2px solid #1e90ff;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
@@ -108,24 +111,118 @@ footer {
     text-align: center;
     margin-top: 20px;
     color: #555;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
+/* Imagem canto */
 .img-canto {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    height: 5cm;
+    height: clamp(3cm, 20vw, 5cm);
     width: auto;
     z-index: 1000;
 }
 
+/* Títulos */
 .title {
-  color: #1e90ff;
-  font-size: 2rem;
-  margin-bottom: 10px;
+    color: #1e90ff;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 10px;
 }
+
 .subtitle {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+    color: #333;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin-bottom: 25px;
+}
+
+/* ===================================================== */
+/* ================== MEDIA QUERIES ==================== */
+/* ===================================================== */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .div_caixa {
+        padding: 30px 20px;
+        max-width: 90%;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+    }
+
+    .btn_entrar, .cadastro-btn {
+        padding: 10px;
+    }
+
+    .img-canto {
+        height: 4cm;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+/* Celulares (até 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .div_caixa {
+        width: 100%;
+        max-width: 350px;
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .btn_entrar,
+    .cadastro-btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .img-canto {
+        position: static;
+        display: block;
+        margin: 20px auto 0;
+        height: 3cm;
+    }
+}
+
+/* Telas muito pequenas (até 350px) */
+@media (max-width: 350px) {
+    .div_caixa {
+        padding: 20px 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    .btn_entrar, .cadastro-btn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 0.85rem;
+    }
 }
