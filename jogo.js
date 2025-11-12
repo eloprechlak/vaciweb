@@ -120,4 +120,4 @@ function salvarPontuacaoLocal(scoreToSend){
     };
 
 // --- Navegação ---
-function irParaPrincipal(){ window.location.href="../principal/principal.html"; }
+function irParaPrincipal() { window.location.href = "principal.html"; }
