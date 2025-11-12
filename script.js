@@ -46,12 +46,8 @@ if (loginForm) {
 // =======================
 // 🧭 NAVEGAÇÃO ENTRE TELAS
 // =======================
-function goHome() { window.location.href = "index.html"; }
-function irParaLogin() { window.location.href = "login.html"; }
-function irParaPrincipal() { window.location.href = "principal.html"; }
-function irParaCadastro() { window.location.href = "cadastro.html"; }
 function irbebe() { window.location.href = "bebe.html"; }
-function iradolescente() { window.location.href = "adolecente.html"; }
+function iradolescente() { window.location.href = "adolescente.html"; } 
 function iradulto() { window.location.href = "adultoidoso.html"; }
 function irgestante() { window.location.href = "gestante.html"; }
 function irJogo() { window.location.href = "jogo.html"; }
