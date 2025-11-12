@@ -68,9 +68,11 @@ body{
   display:flex;
   gap:24px;
   align-items:center;
+  justify-content:space-between;
   padding:0 20px;
+  flex-wrap:wrap;
 }
-.hero-content{flex:1}
+.hero-content{flex:1;min-width:260px;}
 .hero-stripes{
   display:inline-block;
   align-items:center;
@@ -109,8 +111,20 @@ body{
 }
 
 /* Mascote */
-.mascot img{ width:120px; height:120px; border-radius:50%; display:block }
-.mascot{flex:0 0 140px; display:flex; align-items:flex-start; justify-content:center}
+.mascot{
+  flex:0 0 140px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+.mascot img{
+  width:120px;
+  height:auto;
+  border-radius:50%;
+  display:block;
+  object-fit:cover;
+  max-width:100%;
+}
 
 /* Intro yellow card */
 .intro{max-width:1100px;margin:18px auto;padding:0 20px}
@@ -190,16 +204,40 @@ body{
 
 /* Responsividade */
 @media (max-width:1000px){
-  .cards-grid{grid-template-columns: repeat(2, 1fr)}
-  .hero{flex-direction:column;align-items:flex-start}
-  .mascot{align-self:center}
+  .cards-grid{grid-template-columns: repeat(2, 1fr);}
+  .hero{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+  }
+  .hero-stripes .stripe{font-size:18px;}
+  .mascot{
+    align-self:center;
+    margin-top:10px;
+  }
+  .mascot img{
+    width:100px;
+    height:auto;
+  }
 }
+
 @media (max-width:640px){
-  .cards-grid{grid-template-columns: 1fr}
-  .header-inner{padding:0 14px}
-  .hero-stripes .stripe{font-size:16px;padding:12px 14px}
-  .stamp{display:none}
-  .mascot img{width:90px;height:90px}
+  .cards-grid{grid-template-columns: 1fr;}
+  .header-inner{padding:0 14px;}
+  .hero-stripes .stripe{font-size:16px;padding:12px 14px;}
+  .stamp{display:none;}
+  .mascot img{
+    width:80px;
+    height:auto;
+  }
+  .hero{
+    gap:16px;
+    text-align:center;
+  }
+  .nav-btn{
+    padding:6px 10px;
+    font-size:14px;
+  }
 }
 
 /* Score */
@@ -270,10 +308,10 @@ body{
 
 .gota {
   position: absolute;
-  top: 100px;        /* Mudou de bottom para top */
-  right: 20px;      /* Alinha à direita */
+  top: 100px;
+  right: 20px;
   width: 200px;
   height: auto;
   animation: bounce 2s infinite;
-  transform: none;  /* Remove o translateX usado antes */
+  transform: none;
 }
