@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #f7fbfd;
+    color: #222;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    width: 100%;
+    background: #3299CC;
+    color: #fff;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-titulo {
+    font-size: 28px;
+    color: black;
+    font-family: 'Anton', sans-serif;
+}
+
+/* ===== MENU ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+button.inicio-btn {
+    background: #749ef3;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button.inicio-btn:hover {
+    background: #004aad;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.imagem-grande {
+    width: 100%;
+    display: flex;
+    flex-direction: column;  /* deixa as imagens em coluna */
+    align-items: center;
+    gap: 20px; /* espaço entre as imagens */
+    margin: 20px 0;
+}
+
+.imagem-grande img {
+    width: 60%;         
+    max-width: 750px;   
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .imagem-grande img {
+        width: 95%;
+        max-width: none;
+    }
+}
+
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: #3299CC;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: black;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 900px) {
+    .logo-titulo {
+        font-size: 22px;
+    }
+
+    .header-content {
+        padding: 14px;
+    }
+}
+
