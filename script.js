@@ -55,6 +55,7 @@ function irJogo() { window.location.href = "jogo.html"; }
 function irParaPrincipal() { window.location.href = "principal.html"; }
 function irParaLogin() { window.location.href = "login.html"; }
 function irParaCadastro() { window.location.href = "cadastro.html"; }
+function ircampanha() { window.location.href = "campanha.html"; }
 
 // =======================
 // 📚 BOTÃO "SAIBA MAIS"
