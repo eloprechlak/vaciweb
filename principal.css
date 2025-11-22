@@ -1,147 +1,432 @@
-/* ===== CONFIGURAÇÃO PADRÃO ===== */
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* ====================== AJUSTES GERAIS ====================== */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    background: #f1e9ff;
+html, body {
     overflow-x: hidden;
 }
 
-/* ===== HEADER ===== */
+img, iframe {
+    max-width: 100%;
+}
+
+/* ====================== CABEÇALHO ====================== */
 header {
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     width: 100%;
-    background: #8f5ee9;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #3299CC;
+    color: #fff;
 }
 
 .header-content {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo-titulo {
+    margin: 0;
+    font-size: 28px;
+    color: black;
+    font-family: 'Anton', sans-serif;
+    text-align: left;
+}
+
+/* ====================== NAVEGAÇÃO ====================== */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+/* Botão Menu */
+button.inicio-btn {
+    color: black;
+    background: #749ef3;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.header-logo {
-    width: 100px;
-}
-
-/* ===== HERO SECTION ===== */
-.hero-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 5%;
-    gap: 20px;
-}
-
-.hero-text {
-    max-width: 500px;
-}
-
-.hero-text h1 {
-    font-size: 42px;
+    padding: 8px 16px;
+    border-radius: 20px;
     font-weight: bold;
+    transition: 0.2s;
 }
 
-.hero-text p {
-    font-size: 20px;
-    margin-top: 10px;
+button.inicio-btn:hover {
+    color: white;
+    background: #004aad;
 }
 
-.hero-img img {
-    width: 350px;
+.icon-cadastro {
+    width: 15px;
+    height: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+/* ====================== MASCOTE + TÍTULO ====================== */
+.mascote-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.logo-header {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.mascote-titulo {
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    color: #222;
+    font-weight: bold;
+    margin: 0;
+}
+
+.mascote-texto-baixo {
+    font-size: 25px;
+    color: #333;
+    text-align: center;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.3;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* ====================== TÍTULO SECUNDÁRIO ====================== */
+.titulo-secundario {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: #0074d9;
+    font-weight: bold;
+    margin: 40px auto 15px auto;
+    text-align: center;
+}
+
+/* ====================== TEXTO DESCRITIVO ====================== */
+.texto-descritivo {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+/* ====================== BLOCO CURVO ====================== */
+.bloco-curvo {
+    background: #c4e6f2;
+    padding: 60px 20px 80px;
+    border-radius: 80px;
+    margin-bottom: 40px;
+}
+
+/* ====================== BOTÕES DE IMAGEM ====================== */
+.botoes-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-img {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn-img:hover {
+    transform: scale(1.15);
+}
+
+/* ====================== CARROSSEL ====================== */
+.carousel-container {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel-container img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-container img.active {
+    opacity: 1;
+}
+
+/* ====================== BOTÃO IMAGEM NO CANTO ====================== */
+.img-btn-carrossel {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.img-btn-carrossel img {
+    width: 500px;
+    height: auto;
+    pointer-events: none;
+}
+
+.img-btn-carrossel:hover {
+    transform: scale(1.08);
+}
+
+/* ====================== BOTÃO JOGO ====================== */
+#btnJogo {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+}
+
+#btnJogo img {
+    width: 100%;
     height: auto;
 }
 
-/* ===== BOTÕES ===== */
-.btn {
-    background: #a47ef5;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-block;
-    margin-top: 20px;
+/* ====================== RODAPÉ ====================== */
+footer {
+    background-color: #3299CC;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: black;
 }
 
-/* ===== CARDS ===== */
-.cards-container {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 40px 0;
-}
+/* ===================================================== */
+/* =================== RESPONSIVIDADE ================== */
+/* ===================================================== */
 
-.card {
-    width: 280px;
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* ================================
-   MEDIA QUERY — APENAS DIMINUI TAMANHOS
-   SEM MUDAR POSIÇÃO, SEM MUDAR FLEX,
-   SEM MOVER ELEMENTO
-==================================*/
-
-@media (max-width: 768px) {
-
-    /* Tudo apenas diminui um pouco */
-    .header-logo {
-        width: 80px;
+/* Telas até 1024px */
+@media (max-width: 1024px) {
+    .logo-header {
+        width: 150px;
+        height: 150px;
     }
 
-    .hero-section {
-        padding: 20px 5%;
+    .btn-img {
+        width: 150px;
+    }
+
+    .mascote-texto-baixo {
+        font-size: 22px;
+    }
+
+    .img-btn-carrossel img {
+        width: 350px;
+    }
+
+    .img-btn-carrossel {
+        top: -30px;
+        right: -30px;
+    }
+}
+
+/* Telas até 768px */
+@media (max-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
         gap: 10px;
     }
 
-    .hero-text h1 {
-        font-size: 32px;
+    nav ul {
+        flex-wrap: wrap;
+        gap: 6px;
     }
 
-    .hero-text p {
-        font-size: 18px;
+    .mascote-container {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hero-img img {
+    .logo-header {
+        width: 130px;
+        height: 130px;
+    }
+
+    .btn-img {
+        width: 140px;
+    }
+
+    .texto-descritivo {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+    }
+
+    /* Botão carrossel vira centralizado */
+    .img-btn-carrossel {
+        position: relative;
+        top: 20px;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-btn-carrossel img {
         width: 260px;
-    }
-
-    .card {
-        width: 240px;
-        padding: 15px;
     }
 }
 
+/* Celulares até 480px */
 @media (max-width: 480px) {
 
-    /* Reduz, mas NÃO quebra layout */
-    .hero-text h1 {
-        font-size: 26px;
+    .logo-titulo {
+        font-size: 20px !important;
     }
 
-    .hero-text p {
+    button.inicio-btn {
+        font-size: 0.9rem;
+    }
+
+    .logo-header {
+        width: 110px;
+        height: 110px;
+    }
+
+    .btn-img {
+        width: 120px;
+    }
+
+    .mascote-texto-baixo {
         font-size: 16px;
+        padding: 0 10px;
     }
 
-    .hero-img img {
-        width: 220px;
-    }
-
-    .card {
+    .img-btn-carrossel img {
         width: 210px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+/* -------- AJUSTES GERAIS PARA MOBILE -------- */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden; /* impede a página de ficar deslizando pros lados */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Títulos muito grandes no celular */
+    h1, h2, h3 {
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    /* Texto mais confortável */
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    /* Centralizar itens */
+    .container,
+    .section,
+    .content {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ícones ou botões circulares */
+    .icone,
+    .btn-icon {
+        width: 120px;
+        height: 120px;
+        margin: 10px auto;
+    }
+
+    /* Botões em linha viram coluna */
+    .opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* A imagem grande do Zé Gotinha */
+    .img-principal {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Botão de scroll para cima */
+    .scroll-btn {
+        bottom: 20px;
     }
 }
