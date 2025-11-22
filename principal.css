@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
-
 /* ======= AJUSTES GERAIS ======= */
 * {
     box-sizing: border-box;
@@ -33,13 +30,11 @@ header {
     font-size: 28px;
     color: black;
     font-family: 'Anton', sans-serif;
-    text-align: left;
 }
 
 /* ======= NAVEGAÇÃO ======= */
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -49,7 +44,6 @@ nav ul li {
     margin: 0 10px;
 }
 
-/* Botão do menu */
 button.inicio-btn {
     color: black;
     background: #749ef3;
@@ -61,28 +55,15 @@ button.inicio-btn {
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
-    transition: color 0.2s, background 0.2s;
     gap: 8px;
-}
-
-button.inicio-btn:hover {
-    color: white;
-    background: #004aad;
-}
-
-.icon-cadastro {
-    width: 15px;
-    height: 20px;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
 }
 
 /* ======= MASCOTE + TÍTULO ======= */
 .mascote-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* SEMPRE LADO A LADO */
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 30px;
     padding: 20px;
 }
@@ -90,77 +71,54 @@ button.inicio-btn:hover {
 .logo-header {
     width: 180px;
     height: 180px;
-    object-fit: contain;
 }
 
+/* ======= TEXTOS ======= */
 .mascote-titulo {
     text-align: center;
     font-family: 'Anton', sans-serif;
     font-size: 30px;
-    color: #222;
-    font-weight: bold;
-    margin: 0;
 }
 
 .mascote-texto-baixo {
     font-size: 25px;
-    color: #333;
-    text-align: center;
     max-width: 900px;
     margin: 20px auto;
-    line-height: 1.3;
-    font-family: 'Open Sans', Arial, sans-serif;
+    text-align: center;
 }
 
-/* ======= TÍTULO SECUNDÁRIO ======= */
 .titulo-secundario {
     font-family: 'Anton', sans-serif;
     font-size: 24px;
-    color: #0074d9;
-    font-weight: bold;
-    margin: 40px auto 15px auto;
     text-align: center;
 }
 
-/* ======= TEXTO DESCRITIVO ======= */
 .texto-descritivo {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
-    color: black;
     text-align: center;
-    margin: 0 auto 40px auto;
     max-width: 900px;
-    line-height: 1.6;
+    margin: 0 auto 40px auto;
 }
 
-/* ======= FUNDO CURVO ======= */
+/* ======= CURVA ======= */
 .bloco-curvo {
     background: #c4e6f2;
     padding: 60px 20px;
     border-radius: 50px;
-    margin-bottom: 40px;
 }
 
-/* ======= BOTÕES DE IMAGEM ======= */
+/* ======= BOTÕES ======= */
 .botoes-container {
     display: flex;
     gap: 8px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* NÃO QUEBRA */
 }
 
 .btn-img {
     width: 180px;
-    height: auto;
-    cursor: pointer;
-    border: none;
-    background: none;
-    transition: transform 0.2s ease;
-}
-
-.btn-img img {
-    width: 100%;
-    object-fit: contain;
+    transition: transform 0.2s;
 }
 
 .btn-img:hover {
@@ -171,149 +129,33 @@ button.inicio-btn:hover {
 .carousel-container {
     width: 100%;
     max-width: 800px;
-    height: auto;
     margin: 25px auto;
     position: relative;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.carousel-container img {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 1s ease-in-out;
-}
+/* ===========================
+     RESPONSIVIDADE SEM QUEBRAR
+=========================== */
 
-.carousel-container img.active {
-    opacity: 1;
-}
-
-/* ======= BOTÃO JOGO ======= */
-#btnJogo {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border: none;
-    background: none;
-    display: flex;
-    justify-content: center;
-}
-
-#btnJogo img {
-    width: 100%;
-    height: auto;
-}
-
-/* ======= RODAPÉ ======= */
-footer {
-    background-color: #3299CC;
-    text-align: center;
-    padding: 15px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 14px;
-    color: black;
-}
-
-/* ===================================================== */
-/* =================== RESPONSIVIDADE ================== */
-/* ===================================================== */
-
-/* Telas até 1024px (tablets) */
 @media (max-width: 1024px) {
-
-    .logo-header {
-        width: 150px;
-        height: 150px;
-    }
-
-    .btn-img {
-        width: 150px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 22px;
-    }
-
-    .carousel-container {
-        max-width: 90%;
-    }
+    .logo-header { width: 160px; height: 160px; }
+    .btn-img { width: 160px; }
+    .mascote-texto-baixo { font-size: 22px; }
 }
 
-/* Telas até 768px (celulares comuns) */
 @media (max-width: 768px) {
-
-    header {
-        text-align: center;
-    }
-
-    .header-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    button.inicio-btn {
-        font-size: 1rem;
-    }
-
-    .mascote-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo-header {
-        width: 130px;
-        height: 130px;
-    }
-
-    .btn-img {
-        width: 140px;
-    }
-
-    .texto-descritivo {
-        font-size: 16px;
-        max-width: 90%;
-    }
-
-    .carousel-container {
-        max-width: 95%;
-    }
+    /* APENAS REDUZ TAMANHO — NÃO ALTERA POSIÇÃO */
+    .logo-header { width: 140px; height: 140px; }
+    .btn-img { width: 140px; }
+    .logo-titulo { font-size: 26px; }
+    .mascote-texto-baixo { font-size: 20px; }
 }
 
-/* Telas até 480px (celulares pequenos) */
 @media (max-width: 480px) {
-
-    .logo-titulo {
-        font-size: 20px !important;
-    }
-
-    button.inicio-btn {
-        font-size: 0.9rem;
-    }
-
-    .logo-header {
-        width: 110px;
-        height: 110px;
-    }
-
-    .btn-img {
-        width: 120px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
+    /* CONTINUA TUDO IGUAL, APENAS MENOR */
+    .logo-header { width: 120px; height: 120px; }
+    .btn-img { width: 120px; }
+    .mascote-texto-baixo { font-size: 18px; }
+    .logo-titulo { font-size: 22px; }
 }
