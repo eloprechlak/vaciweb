@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="principal.css">
-    <link rel="shortcut icon" type="image/x-icon" href="imagem.png">
+    <link rel="icon" href="./img/Design sem nome (2).png" type="image/png">
 </head>
-<body>
 
+<body>
 <header>
     <div class="header-content">
         <div class="logo-container">
@@ -33,36 +33,45 @@
     </p>
 
     <!-- CARROSSEL -->
-    <div class="carousel-container">
-        <img src="./img/movimento vacinaçao.png" class="carousel-image active" alt="Vacinação 1">
-        <img src="./img/bannerinfluenza.png" class="carousel-image" alt="Vacinação 2">
-        <img src="./img/hp.jpeg" class="carousel-image" alt="Vacinação 3">
-        <img src="./img/vacina.jpeg" class="carousel-image" alt="Vacinação 4">
-        <img src="./img/covid.png" class="carousel-image" alt="Vacinação 5">
+    <div class="campanha-carousel-container">
+
+        <div class="carousel-container">
+            <img src="./img/movimento vacinaçao.png" class="carousel-image active" alt="Vacinação 1">
+            <img src="./img/bannerinfluenza.png" class="carousel-image" alt="Vacinação 2">
+            <img src="./img/hp.jpeg" class="carousel-image" alt="Vacinação 3">
+            <img src="./img/vacina.jpeg" class="carousel-image" alt="Vacinação 4">
+            <img src="./img/covid.png" class="carousel-image" alt="Vacinação 5">
+        </div>
+
+        <!-- IMAGEM-BOTÃO NO CANTO SUPERIOR DIREITO -->
+        <div class="img-btn-carrossel" onclick="ircampanha()">
+            <img src="./img/História_da_vacina-removebg-preview.png"Ir para campanhas">
+        </div>
     </div>
 
     <div class="bloco-curvo">
         <div class="titulo-container">
-            <img src="https://www.gov.br/saude/pt-br/vacinacao/vacinacao/@@govbr.institucional.banner/b524fbc5-07d8-445a-a44a-76f439ddebb2/@@images/ab9027ce-3707-498a-bb89-3a4eb806f5ca.gif" alt="Linha decorativa" class="linha-decorativa">
+            <img src="https://www.gov.br/saude/pt-br/vacinacao/vacinacao/@@govbr.institucional.banner/b524fbc5-07d8-445a-a44a-76f439ddebb2/@@images/ab9027ce-3707-498a-bb89-3a4eb806f5ca.gif"
+                 alt="Linha decorativa" class="linha-decorativa">
             <h3 class="titulo-secundario">Calendário Nacional de Vacinação</h3>
         </div>
 
-    <p class="texto-descritivo">
-        O Calendário Nacional de Vacinação do Sistema Único de Saúde (SUS) é uma estratégia essencial para a proteção da saúde coletiva no Brasil.
-    </p>
+        <p class="texto-descritivo">
+            O Calendário Nacional de Vacinação do Sistema Único de Saúde (SUS) é uma estratégia essencial para a proteção da saúde coletiva no Brasil.
+        </p>
 
-    <div class="botoes-container">
-        <button onclick="irbebe()" class="btn-img"><img src="./img/1-removebg-preview.png"></button>
-        <button onclick="iradolescente()" class="btn-img"><img src="./img/2-removebg-preview.png"></button>
-        <button onclick="iradulto()" class="btn-img"><img src="./img/3-removebg-preview.png"></button>
-        <button onclick="irgestante()" class="btn-img"><img src="./img/4-removebg-preview.png"></button>
-    </div>
-   
-    <div>
-        <button onclick="irJogo()" class="btn-img" id="btnJogo">
-            <img src="./img/acesse.png" alt="Botão Jogo">
-        </button>
-    </div>
+        <div class="botoes-container">
+            <button onclick="irbebe()" class="btn-img"><img src="./img/1-removebg-preview.png"></button>
+            <button onclick="iradolescente()" class="btn-img"><img src="./img/2-removebg-preview.png"></button>
+            <button onclick="iradulto()" class="btn-img"><img src="./img/3-removebg-preview.png"></button>
+            <button onclick="irgestante()" class="btn-img"><img src="./img/4-removebg-preview.png"></button>
+        </div>
+
+        <div>
+            <button onclick="irJogo()" class="btn-img" id="btnJogo">
+                <img src="./img/Jogue aqui e teste seus conhecimentos!!.png" alt="Botão Jogo">
+            </button>
+        </div>
     </div>
 </main>
 
@@ -70,7 +79,6 @@
     <p>&copy; 2025 Vaciweb. Todos os direitos reservados.</p>
 </footer>
 
-<script src="script.js"></script>
-
+<script src="./script.js"></script>
 </body>
 </html>
