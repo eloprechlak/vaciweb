@@ -135,27 +135,59 @@ button.inicio-btn {
 }
 
 /* ===========================
-     RESPONSIVIDADE SEM QUEBRAR
+     RESPONSIVIDADE AJUSTADA
 =========================== */
 
+/* TABLETS */
 @media (max-width: 1024px) {
     .logo-header { width: 160px; height: 160px; }
     .btn-img { width: 160px; }
     .mascote-texto-baixo { font-size: 22px; }
 }
 
+/* CELULARES MÉDIOS */
 @media (max-width: 768px) {
-    /* APENAS REDUZ TAMANHO — NÃO ALTERA POSIÇÃO */
-    .logo-header { width: 140px; height: 140px; }
+    .logo-header { width: 120px; height: 120px; }
     .btn-img { width: 140px; }
+
+    .mascote-container {
+        gap: 15px;
+        padding: 10px;
+    }
+
     .logo-titulo { font-size: 26px; }
+    .mascote-titulo { font-size: 24px; }
     .mascote-texto-baixo { font-size: 20px; }
 }
 
+/* CELULARES PEQUENOS */
 @media (max-width: 480px) {
-    /* CONTINUA TUDO IGUAL, APENAS MENOR */
-    .logo-header { width: 120px; height: 120px; }
+    .logo-header {
+        width: 90px !important;
+        height: 90px !important;
+    }
+
     .btn-img { width: 120px; }
-    .mascote-texto-baixo { font-size: 18px; }
+
+    .mascote-container {
+        gap: 10px;
+        padding: 5px;
+    }
+
     .logo-titulo { font-size: 22px; }
+    .mascote-titulo { font-size: 20px; }
+    .mascote-texto-baixo { font-size: 18px; }
+
+    /* GARANTE QUE O CARROSSEL APAREÇA */
+    .carousel-container {
+        max-width: 100%;
+        width: 100%;
+        margin: 15px auto;
+        overflow: visible;
+    }
+
+    .carousel-container img {
+        width: 100%;
+        height: auto;
+    }
 }
