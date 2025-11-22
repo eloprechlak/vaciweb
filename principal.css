@@ -1,16 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-/* ======= AJUSTES GERAIS ======= */
-* {
-    box-sizing: border-box;
+
+html, body {
+    overflow-x: hidden;
 }
 
-img, iframe {
-    max-width: 100%;
-}
-
-/* ======= CABEÇALHO ======= */
+/* ===== CABEÇALHO ===== */
 header {
     padding: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -32,14 +28,12 @@ header {
     margin: 0;
     font-size: 28px;
     color: black;
-    font-family: 'Anton', sans-serif;
-    text-align: left;
+    font-family: 'Anton', sans-serif; 
 }
 
-/* ======= NAVEGAÇÃO ======= */
+/* ===== NAVEGAÇÃO ===== */
 nav ul {
     display: flex;
-    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -49,7 +43,6 @@ nav ul li {
     margin: 0 10px;
 }
 
-/* Botão do menu */
 button.inicio-btn {
     color: black;
     background: #749ef3;
@@ -61,8 +54,7 @@ button.inicio-btn {
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
-    transition: color 0.2s, background 0.2s;
-    gap: 8px;
+    transition: 0.2s;
 }
 
 button.inicio-btn:hover {
@@ -70,26 +62,20 @@ button.inicio-btn:hover {
     background: #004aad;
 }
 
-.icon-cadastro {
-    width: 15px;
-    height: 20px;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
-}
-
-/* ======= MASCOTE + TÍTULO ======= */
+/* ===== MASCOTE ===== */
 .mascote-container {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 64px;
+    padding-left: 64px;
 }
 
 .logo-header {
-    width: 180px;
     height: 180px;
+    width: 180px;
     object-fit: contain;
 }
 
@@ -99,30 +85,141 @@ button.inicio-btn:hover {
     font-size: 30px;
     color: #222;
     font-weight: bold;
-    margin: 0;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .mascote-texto-baixo {
     font-size: 25px;
     color: #333;
     text-align: center;
-    max-width: 900px;
-    margin: 20px auto;
-    line-height: 1.3;
+    margin: 40px auto 0 auto;
+    max-width: 1000px;
+    line-height: 1.2;
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* ======= TÍTULO SECUNDÁRIO ======= */
+/* ===== CARROSSEL + BOTÃO ===== */
+.campanha-carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 700px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-container img.active {
+    opacity: 1;
+}
+
+/* ===== BOTÃO-IMAGEM NO CANTO ===== */
+.img-btn-carrossel {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.img-btn-carrossel img {
+    width: 500px;
+    height: auto;
+    pointer-events: none;
+}
+
+
+.img-btn-carrossel:hover {
+    transform: scale(1.08);
+}
+
+/* ===== RESPONSIVIDADE DO BOTÃO ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .img-btn-carrossel img {
+        width: 350px;
+    }
+
+    .img-btn-carrossel {
+        top: -30px;
+        right: -30px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    .img-btn-carrossel {
+        position: relative;
+        top: 20px;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-btn-carrossel img {
+        width: 260px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .img-btn-carrossel img {
+        width: 210px;
+    }
+}
+
+/* ===== BLOCO CURVO ===== */
+.bloco-curvo {
+    background: #c4e6f2;
+    padding: 60px 20px 80px;
+    border-radius: 120px;
+    margin-bottom: 40px;
+}
+
+/* ===== TÍTULOS ===== */
+.titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.linha-decorativa {
+    width: 120px;
+}
+
 .titulo-secundario {
     font-family: 'Anton', sans-serif;
     font-size: 24px;
     color: #0074d9;
-    font-weight: bold;
-    margin: 40px auto 15px auto;
-    text-align: center;
 }
 
-/* ======= TEXTO DESCRITIVO ======= */
+/* ===== TEXTOS ===== */
 .texto-descritivo {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
@@ -133,33 +230,20 @@ button.inicio-btn:hover {
     line-height: 1.6;
 }
 
-/* ======= FUNDO CURVO ======= */
-.bloco-curvo {
-    background: #c4e6f2;
-    padding: 60px 20px;
-    border-radius: 50px;
-    margin-bottom: 40px;
-}
-
-/* ======= BOTÕES DE IMAGEM ======= */
-.botoes-container {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
+/* ===== BOTÕES DE IMAGEM ===== */
 .btn-img {
-    width: 180px;
-    height: auto;
+    width: 200px;
+    height: 288px;
+    transition: transform 0.2s;
     cursor: pointer;
     border: none;
     background: none;
-    transition: transform 0.2s ease;
+    padding: 0;
 }
 
 .btn-img img {
     width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
@@ -167,153 +251,50 @@ button.inicio-btn:hover {
     transform: scale(1.15);
 }
 
-/* ======= CARROSSEL ======= */
-.carousel-container {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    margin: 25px auto;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.carousel-container img {
-    width: 100%;
-    height: auto;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 1s ease-in-out;
-}
-
-.carousel-container img.active {
-    opacity: 1;
-}
-
-/* ======= BOTÃO JOGO ======= */
-#btnJogo {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border: none;
-    background: none;
+.botoes-container {
     display: flex;
+    gap: 8px;
     justify-content: center;
 }
 
-#btnJogo img {
+/* ===== BOTÃO JOGO ===== */
+#btnJogo {
     width: 100%;
+    max-width: 1100px; /* mantém grande, mas sem estourar */
     height: auto;
+    border: none !important;
+    background: none !important;
+    display: flex;
+    margin: 0 auto;
 }
 
-/* ======= RODAPÉ ======= */
+
+#btnJogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ===== RESPONSIVO BTN JOGO ===== */
+@media (max-width: 900px) {
+    #btnJogo {
+        width: 95%;
+        height: auto;
+    }
+
+    #btnJogo img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ===== RODAPÉ ===== */
 footer {
     background-color: #3299CC;
     text-align: center;
     padding: 15px;
+    margin-top: 40px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 14px;
     color: black;
-}
-
-/* ===================================================== */
-/* =================== RESPONSIVIDADE ================== */
-/* ===================================================== */
-
-/* Telas até 1024px (tablets) */
-@media (max-width: 1024px) {
-
-    .logo-header {
-        width: 150px;
-        height: 150px;
-    }
-
-    .btn-img {
-        width: 150px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 22px;
-    }
-
-    .carousel-container {
-        max-width: 90%;
-    }
-}
-
-/* Telas até 768px (celulares comuns) */
-@media (max-width: 768px) {
-
-    header {
-        text-align: center;
-    }
-
-    .header-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    button.inicio-btn {
-        font-size: 1rem;
-    }
-
-    .mascote-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo-header {
-        width: 130px;
-        height: 130px;
-    }
-
-    .btn-img {
-        width: 140px;
-    }
-
-    .texto-descritivo {
-        font-size: 16px;
-        max-width: 90%;
-    }
-
-    .carousel-container {
-        max-width: 95%;
-    }
-}
-
-/* Telas até 480px (celulares pequenos) */
-@media (max-width: 480px) {
-
-    .logo-titulo {
-        font-size: 20px !important;
-    }
-
-    button.inicio-btn {
-        font-size: 0.9rem;
-    }
-
-    .logo-header {
-        width: 110px;
-        height: 110px;
-    }
-
-    .btn-img {
-        width: 120px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 16px;
-        padding: 0 10px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
 }
