@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-/* ====================== AJUSTES GERAIS ====================== */
+/* ======= AJUSTES GERAIS ======= */
 * {
     box-sizing: border-box;
-}
-
-html, body {
-    overflow-x: hidden;
 }
 
 img, iframe {
     max-width: 100%;
 }
 
-/* ====================== CABEÇALHO ====================== */
+/* ======= CABEÇALHO ======= */
 header {
     padding: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -40,9 +36,10 @@ header {
     text-align: left;
 }
 
-/* ====================== NAVEGAÇÃO ====================== */
+/* ======= NAVEGAÇÃO ======= */
 nav ul {
     display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -52,7 +49,7 @@ nav ul li {
     margin: 0 10px;
 }
 
-/* Botão Menu */
+/* Botão do menu */
 button.inicio-btn {
     color: black;
     background: #749ef3;
@@ -64,7 +61,8 @@ button.inicio-btn {
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
-    transition: 0.2s;
+    transition: color 0.2s, background 0.2s;
+    gap: 8px;
 }
 
 button.inicio-btn:hover {
@@ -78,7 +76,7 @@ button.inicio-btn:hover {
     filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
 }
 
-/* ====================== MASCOTE + TÍTULO ====================== */
+/* ======= MASCOTE + TÍTULO ======= */
 .mascote-container {
     display: flex;
     flex-direction: row;
@@ -114,7 +112,7 @@ button.inicio-btn:hover {
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* ====================== TÍTULO SECUNDÁRIO ====================== */
+/* ======= TÍTULO SECUNDÁRIO ======= */
 .titulo-secundario {
     font-family: 'Anton', sans-serif;
     font-size: 24px;
@@ -124,7 +122,7 @@ button.inicio-btn:hover {
     text-align: center;
 }
 
-/* ====================== TEXTO DESCRITIVO ====================== */
+/* ======= TEXTO DESCRITIVO ======= */
 .texto-descritivo {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
@@ -135,15 +133,15 @@ button.inicio-btn:hover {
     line-height: 1.6;
 }
 
-/* ====================== BLOCO CURVO ====================== */
+/* ======= FUNDO CURVO ======= */
 .bloco-curvo {
     background: #c4e6f2;
-    padding: 60px 20px 80px;
-    border-radius: 80px;
+    padding: 60px 20px;
+    border-radius: 50px;
     margin-bottom: 40px;
 }
 
-/* ====================== BOTÕES DE IMAGEM ====================== */
+/* ======= BOTÕES DE IMAGEM ======= */
 .botoes-container {
     display: flex;
     gap: 8px;
@@ -169,7 +167,7 @@ button.inicio-btn:hover {
     transform: scale(1.15);
 }
 
-/* ====================== CARROSSEL ====================== */
+/* ======= CARROSSEL ======= */
 .carousel-container {
     width: 100%;
     max-width: 800px;
@@ -193,27 +191,7 @@ button.inicio-btn:hover {
     opacity: 1;
 }
 
-/* ====================== BOTÃO IMAGEM NO CANTO ====================== */
-.img-btn-carrossel {
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    z-index: 10;
-}
-
-.img-btn-carrossel img {
-    width: 500px;
-    height: auto;
-    pointer-events: none;
-}
-
-.img-btn-carrossel:hover {
-    transform: scale(1.08);
-}
-
-/* ====================== BOTÃO JOGO ====================== */
+/* ======= BOTÃO JOGO ======= */
 #btnJogo {
     width: 100%;
     max-width: 600px;
@@ -229,7 +207,7 @@ button.inicio-btn:hover {
     height: auto;
 }
 
-/* ====================== RODAPÉ ====================== */
+/* ======= RODAPÉ ======= */
 footer {
     background-color: #3299CC;
     text-align: center;
@@ -243,8 +221,9 @@ footer {
 /* =================== RESPONSIVIDADE ================== */
 /* ===================================================== */
 
-/* Telas até 1024px */
+/* Telas até 1024px (tablets) */
 @media (max-width: 1024px) {
+
     .logo-header {
         width: 150px;
         height: 150px;
@@ -258,17 +237,12 @@ footer {
         font-size: 22px;
     }
 
-    .img-btn-carrossel img {
-        width: 350px;
-    }
-
-    .img-btn-carrossel {
-        top: -30px;
-        right: -30px;
+    .carousel-container {
+        max-width: 90%;
     }
 }
 
-/* Telas até 768px */
+/* Telas até 768px (celulares comuns) */
 @media (max-width: 768px) {
 
     header {
@@ -283,6 +257,10 @@ footer {
     nav ul {
         flex-wrap: wrap;
         gap: 6px;
+    }
+
+    button.inicio-btn {
+        font-size: 1rem;
     }
 
     .mascote-container {
@@ -307,23 +285,9 @@ footer {
     .carousel-container {
         max-width: 95%;
     }
-
-    /* Botão carrossel vira centralizado */
-    .img-btn-carrossel {
-        position: relative;
-        top: 20px;
-        right: 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    .img-btn-carrossel img {
-        width: 260px;
-    }
 }
 
-/* Celulares até 480px */
+/* Telas até 480px (celulares pequenos) */
 @media (max-width: 480px) {
 
     .logo-titulo {
@@ -348,85 +312,8 @@ footer {
         padding: 0 10px;
     }
 
-    .img-btn-carrossel img {
-        width: 210px;
-    }
-
     footer {
         font-size: 12px;
         padding: 10px;
-    }
-}
-/* -------- AJUSTES GERAIS PARA MOBILE -------- */
-@media (max-width: 768px) {
-
-    body {
-        overflow-x: hidden; /* impede a página de ficar deslizando pros lados */
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Títulos muito grandes no celular */
-    h1, h2, h3 {
-        font-size: 1.6rem;
-        text-align: center;
-        line-height: 2rem;
-    }
-
-    /* Texto mais confortável */
-    p {
-        font-size: 1rem;
-        padding: 0 10px;
-        text-align: center;
-    }
-
-    /* Centralizar itens */
-    .container,
-    .section,
-    .content {
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-    }
-
-    /* Ícones ou botões circulares */
-    .icone,
-    .btn-icon {
-        width: 120px;
-        height: 120px;
-        margin: 10px auto;
-    }
-
-    /* Botões em linha viram coluna */
-    .opcoes {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    /* Header */
-    header {
-        padding: 15px;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    /* A imagem grande do Zé Gotinha */
-    .img-principal {
-        width: 80%;
-        margin: 0 auto;
-        display: block;
-    }
-
-    /* Botão de scroll para cima */
-    .scroll-btn {
-        bottom: 20px;
     }
 }
