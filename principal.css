@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
-/* Cabeçalho */
+/* ======= AJUSTES GERAIS ======= */
+* {
+    box-sizing: border-box;
+}
+
+img, iframe {
+    max-width: 100%;
+}
+
+/* ======= CABEÇALHO ======= */
 header {
     padding: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     width: 100%;
-    position: relative;
     background: #3299CC;
     color: #fff;
 }
@@ -24,11 +32,11 @@ header {
     margin: 0;
     font-size: 28px;
     color: black;
-    font-family: 'Anton', sans-serif; 
+    font-family: 'Anton', sans-serif;
     text-align: left;
 }
 
-/* Navegação */
+/* ======= NAVEGAÇÃO ======= */
 nav ul {
     display: flex;
     justify-content: center;
@@ -41,7 +49,7 @@ nav ul li {
     margin: 0 10px;
 }
 
-/* Botão de início (mantido) */
+/* Botão do menu */
 button.inicio-btn {
     color: black;
     background: #749ef3;
@@ -63,26 +71,25 @@ button.inicio-btn:hover {
 }
 
 .icon-cadastro {
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
     width: 15px;
     height: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
 }
 
-/* Mascote + título */
+/* ======= MASCOTE + TÍTULO ======= */
 .mascote-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    gap: 64px;
-    padding-left: 64px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
 }
 
 .logo-header {
-    height: 180px;
     width: 180px;
+    height: 180px;
     object-fit: contain;
 }
 
@@ -92,57 +99,30 @@ button.inicio-btn:hover {
     font-size: 30px;
     color: #222;
     font-weight: bold;
-    margin: 40px auto 0 auto;
-    letter-spacing: 1px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.mascote-titulo span {
-    display: block;
-    width: 100%;
-    text-align: center;
+    margin: 0;
 }
 
 .mascote-texto-baixo {
     font-size: 25px;
     color: #333;
     text-align: center;
-    margin: 40px auto 0 auto;
-    max-width: 1000px;
-    line-height: 1.2;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.3;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 400;
 }
 
-/* Subtítulo */
+/* ======= TÍTULO SECUNDÁRIO ======= */
 .titulo-secundario {
     font-family: 'Anton', sans-serif;
     font-size: 24px;
-    color: #0074d9; /* azul destacado */
+    color: #0074d9;
     font-weight: bold;
-    margin: 40px 10px 15px 0;
-    text-align: left;
+    margin: 40px auto 15px auto;
+    text-align: center;
 }
 
-/* Container para título e imagem */
-.titulo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.linha-decorativa {
-    width: 120px;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Texto descritivo */
+/* ======= TEXTO DESCRITIVO ======= */
 .texto-descritivo {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
@@ -153,100 +133,45 @@ button.inicio-btn:hover {
     line-height: 1.6;
 }
 
-/* Rodapé */
-footer {
-    background-color: #3299CC;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 14px;
-    color: black;
+/* ======= FUNDO CURVO ======= */
+.bloco-curvo {
+    background: #c4e6f2;
+    padding: 60px 20px;
+    border-radius: 50px;
+    margin-bottom: 40px;
 }
 
-/* Botões de imagem */
+/* ======= BOTÕES DE IMAGEM ======= */
+.botoes-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .btn-img {
-    width: 200px;
-    height: 288.1px;
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 180px;
+    height: auto;
     cursor: pointer;
     border: none;
     background: none;
-    outline: none;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5px; /* Aproxima o botão das escritas */
+    transition: transform 0.2s ease;
 }
 
 .btn-img img {
     width: 100%;
-    height: 100%;
     object-fit: contain;
 }
 
 .btn-img:hover {
     transform: scale(1.15);
-    z-index: 2;
 }
 
-.botoes-container {
-    display: flex;
-    gap: 8px; /* Diminua o espaço entre os botões */
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.linha2 .imagens {
-    animation-direction: reverse;
-}
-
-.imagens img {
-    width: 200px;
-    height: 10px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-
-.imagens img:hover {
-    transform: scale(1.05);
-}
-
-@keyframes mover {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-#btnJogo {
-    width: 1500px;
-    height: 150px;
-    border: none !important;
-    background: none !important;
-    box-shadow: none !important;
-    align-items: center;
-}
-
-#btnJogo img {
-    border: none;
-    background: none;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    align-items: center;
-}
-
-/* Carrossel */
+/* ======= CARROSSEL ======= */
 .carousel-container {
     width: 100%;
     max-width: 800px;
-    height: 360px;
+    height: auto;
     margin: 25px auto;
     position: relative;
     overflow: hidden;
@@ -255,13 +180,10 @@ footer {
 }
 
 .carousel-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     opacity: 0;
+    position: absolute;
     transition: opacity 1s ease-in-out;
 }
 
@@ -269,75 +191,58 @@ footer {
     opacity: 1;
 }
 
-/* Fundo cinza arredondado estilo gov.br */
-.bloco-curvo {
-    background: #c4e6f2; /* cinza claro bonito */
-    padding: 60px 20px 80px 20px;
-    border-top-left-radius: 50% 10%;
-    border-top-right-radius: 50% 10%;
-    border-bottom-left-radius: 50% 10%;
-    border-bottom-right-radius: 50% 10%;
-    margin-bottom: 40px;
+/* ======= BOTÃO JOGO ======= */
+#btnJogo {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
 }
 
-/* RESPONSIVIDADE GERAL */
+#btnJogo img {
+    width: 100%;
+    height: auto;
+}
 
-/* Telas médias (tablets e celulares grandes) */
+/* ======= RODAPÉ ======= */
+footer {
+    background-color: #3299CC;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+/* ===================================================== */
+/* =================== RESPONSIVIDADE ================== */
+/* ===================================================== */
+
+/* Telas até 1024px (tablets) */
 @media (max-width: 1024px) {
 
-    .header-content {
-        padding: 15px;
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .logo-titulo {
-        font-size: 24px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .mascote-container {
-        gap: 32px;
-        padding-left: 20px;
-    }
-
     .logo-header {
-        height: 140px;
-        width: 140px;
-    }
-
-    .mascote-titulo {
-        font-size: 26px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 20px;
-        max-width: 700px;
+        width: 150px;
+        height: 150px;
     }
 
     .btn-img {
-        width: 160px;
-        height: 230px;
+        width: 150px;
     }
 
-    #btnJogo {
-        width: 100%;
-        height: 100px;
+    .mascote-texto-baixo {
+        font-size: 22px;
     }
 
     .carousel-container {
         max-width: 90%;
-        height: 280px;
     }
 }
 
-/* Telas pequenas (celulares comuns) */
+/* Telas até 768px (celulares comuns) */
 @media (max-width: 768px) {
 
     header {
@@ -349,90 +254,62 @@ footer {
         gap: 10px;
     }
 
-    .logo-titulo {
-        font-size: 22px;
-    }
-
-    button.inicio-btn {
-        font-size: 1rem;
-        padding: 6px 12px;
-        border-radius: 16px;
-    }
-
-    .mascote-container {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-        gap: 20px;
-    }
-
-    .logo-header {
-        width: 120px;
-        height: 120px;
-    }
-
-    .mascote-titulo {
-        font-size: 24px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 18px;
-        padding: 0 15px;
-    }
-
-    .botoes-container {
+    nav ul {
         flex-wrap: wrap;
         gap: 6px;
     }
 
+    button.inicio-btn {
+        font-size: 1rem;
+    }
+
+    .mascote-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-header {
+        width: 130px;
+        height: 130px;
+    }
+
     .btn-img {
         width: 140px;
-        height: 200px;
-    }
-
-    #btnJogo {
-        width: 100%;
-        height: 90px;
-    }
-
-    .carousel-container {
-        max-width: 95%;
-        height: 240px;
     }
 
     .texto-descritivo {
         font-size: 16px;
         max-width: 90%;
     }
+
+    .carousel-container {
+        max-width: 95%;
+    }
 }
 
-/* Telas muito pequenas (celulares antigos ou mini telas) */
+/* Telas até 480px (celulares pequenos) */
 @media (max-width: 480px) {
 
     .logo-titulo {
-        font-size: 20px;
+        font-size: 20px !important;
     }
 
     button.inicio-btn {
         font-size: 0.9rem;
-        padding: 5px 10px;
     }
 
-    .mascote-titulo {
-        font-size: 20px;
-    }
-
-    .mascote-texto-baixo {
-        font-size: 16px;
+    .logo-header {
+        width: 110px;
+        height: 110px;
     }
 
     .btn-img {
         width: 120px;
-        height: 170px;
     }
 
-    .carousel-container {
-        height: 200px;
+    .mascote-texto-baixo {
+        font-size: 16px;
+        padding: 0 10px;
     }
 
     footer {
@@ -440,4 +317,3 @@ footer {
         padding: 10px;
     }
 }
-
