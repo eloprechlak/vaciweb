@@ -357,3 +357,76 @@ footer {
         padding: 10px;
     }
 }
+/* -------- AJUSTES GERAIS PARA MOBILE -------- */
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden; /* impede a página de ficar deslizando pros lados */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Títulos muito grandes no celular */
+    h1, h2, h3 {
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    /* Texto mais confortável */
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    /* Centralizar itens */
+    .container,
+    .section,
+    .content {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Ícones ou botões circulares */
+    .icone,
+    .btn-icon {
+        width: 120px;
+        height: 120px;
+        margin: 10px auto;
+    }
+
+    /* Botões em linha viram coluna */
+    .opcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    /* Header */
+    header {
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    /* A imagem grande do Zé Gotinha */
+    .img-principal {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Botão de scroll para cima */
+    .scroll-btn {
+        bottom: 20px;
+    }
+}
