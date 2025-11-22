@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
+/* ====================== AJUSTES GERAIS ====================== */
+* {
+    box-sizing: border-box;
+}
 
 html, body {
     overflow-x: hidden;
 }
 
-/* ===== CABEÇALHO ===== */
+img, iframe {
+    max-width: 100%;
+}
+
+/* ====================== CABEÇALHO ====================== */
 header {
     padding: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -28,10 +36,11 @@ header {
     margin: 0;
     font-size: 28px;
     color: black;
-    font-family: 'Anton', sans-serif; 
+    font-family: 'Anton', sans-serif;
+    text-align: left;
 }
 
-/* ===== NAVEGAÇÃO ===== */
+/* ====================== NAVEGAÇÃO ====================== */
 nav ul {
     display: flex;
     list-style: none;
@@ -43,6 +52,7 @@ nav ul li {
     margin: 0 10px;
 }
 
+/* Botão Menu */
 button.inicio-btn {
     color: black;
     background: #749ef3;
@@ -62,20 +72,26 @@ button.inicio-btn:hover {
     background: #004aad;
 }
 
-/* ===== MASCOTE ===== */
+.icon-cadastro {
+    width: 15px;
+    height: 20px;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+/* ====================== MASCOTE + TÍTULO ====================== */
 .mascote-container {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    gap: 64px;
-    padding-left: 64px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
 }
 
 .logo-header {
-    height: 180px;
     width: 180px;
+    height: 180px;
     object-fit: contain;
 }
 
@@ -85,34 +101,80 @@ button.inicio-btn:hover {
     font-size: 30px;
     color: #222;
     font-weight: bold;
-    margin: 40px auto 0 auto;
-    display: flex;
-    flex-direction: column;
+    margin: 0;
 }
 
 .mascote-texto-baixo {
     font-size: 25px;
     color: #333;
     text-align: center;
-    margin: 40px auto 0 auto;
-    max-width: 1000px;
-    line-height: 1.2;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.3;
     font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* ===== CARROSSEL + BOTÃO ===== */
-.campanha-carousel-container {
-    position: relative;
+/* ====================== TÍTULO SECUNDÁRIO ====================== */
+.titulo-secundario {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: #0074d9;
+    font-weight: bold;
+    margin: 40px auto 15px auto;
+    text-align: center;
+}
+
+/* ====================== TEXTO DESCRITIVO ====================== */
+.texto-descritivo {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+/* ====================== BLOCO CURVO ====================== */
+.bloco-curvo {
+    background: #c4e6f2;
+    padding: 60px 20px 80px;
+    border-radius: 80px;
+    margin-bottom: 40px;
+}
+
+/* ====================== BOTÕES DE IMAGEM ====================== */
+.botoes-container {
     display: flex;
+    gap: 8px;
     justify-content: center;
-    margin: 40px auto;
     flex-wrap: wrap;
 }
 
+.btn-img {
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn-img:hover {
+    transform: scale(1.15);
+}
+
+/* ====================== CARROSSEL ====================== */
 .carousel-container {
     width: 100%;
-    max-width: 700px;
-    height: 360px;
+    max-width: 800px;
+    height: auto;
+    margin: 25px auto;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
@@ -120,13 +182,10 @@ button.inicio-btn:hover {
 }
 
 .carousel-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     opacity: 0;
+    position: absolute;
     transition: opacity 1s ease-in-out;
 }
 
@@ -134,7 +193,7 @@ button.inicio-btn:hover {
     opacity: 1;
 }
 
-/* ===== BOTÃO-IMAGEM NO CANTO ===== */
+/* ====================== BOTÃO IMAGEM NO CANTO ====================== */
 .img-btn-carrossel {
     position: absolute;
     top: -40px;
@@ -150,15 +209,55 @@ button.inicio-btn:hover {
     pointer-events: none;
 }
 
-
 .img-btn-carrossel:hover {
     transform: scale(1.08);
 }
 
-/* ===== RESPONSIVIDADE DO BOTÃO ===== */
+/* ====================== BOTÃO JOGO ====================== */
+#btnJogo {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border: none;
+    background: none;
+    display: flex;
+    justify-content: center;
+}
 
-/* Tablets */
+#btnJogo img {
+    width: 100%;
+    height: auto;
+}
+
+/* ====================== RODAPÉ ====================== */
+footer {
+    background-color: #3299CC;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: black;
+}
+
+/* ===================================================== */
+/* =================== RESPONSIVIDADE ================== */
+/* ===================================================== */
+
+/* Telas até 1024px */
 @media (max-width: 1024px) {
+    .logo-header {
+        width: 150px;
+        height: 150px;
+    }
+
+    .btn-img {
+        width: 150px;
+    }
+
+    .mascote-texto-baixo {
+        font-size: 22px;
+    }
+
     .img-btn-carrossel img {
         width: 350px;
     }
@@ -169,8 +268,47 @@ button.inicio-btn:hover {
     }
 }
 
-/* Celulares grandes */
+/* Telas até 768px */
 @media (max-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .mascote-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-header {
+        width: 130px;
+        height: 130px;
+    }
+
+    .btn-img {
+        width: 140px;
+    }
+
+    .texto-descritivo {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .carousel-container {
+        max-width: 95%;
+    }
+
+    /* Botão carrossel vira centralizado */
     .img-btn-carrossel {
         position: relative;
         top: 20px;
@@ -185,116 +323,37 @@ button.inicio-btn:hover {
     }
 }
 
-/* Celulares pequenos */
+/* Celulares até 480px */
 @media (max-width: 480px) {
+
+    .logo-titulo {
+        font-size: 20px !important;
+    }
+
+    button.inicio-btn {
+        font-size: 0.9rem;
+    }
+
+    .logo-header {
+        width: 110px;
+        height: 110px;
+    }
+
+    .btn-img {
+        width: 120px;
+    }
+
+    .mascote-texto-baixo {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
     .img-btn-carrossel img {
         width: 210px;
     }
-}
 
-/* ===== BLOCO CURVO ===== */
-.bloco-curvo {
-    background: #c4e6f2;
-    padding: 60px 20px 80px;
-    border-radius: 120px;
-    margin-bottom: 40px;
-}
-
-/* ===== TÍTULOS ===== */
-.titulo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.linha-decorativa {
-    width: 120px;
-}
-
-.titulo-secundario {
-    font-family: 'Anton', sans-serif;
-    font-size: 24px;
-    color: #0074d9;
-}
-
-/* ===== TEXTOS ===== */
-.texto-descritivo {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 18px;
-    color: black;
-    text-align: center;
-    margin: 0 auto 40px auto;
-    max-width: 900px;
-    line-height: 1.6;
-}
-
-/* ===== BOTÕES DE IMAGEM ===== */
-.btn-img {
-    width: 200px;
-    height: 288px;
-    transition: transform 0.2s;
-    cursor: pointer;
-    border: none;
-    background: none;
-    padding: 0;
-}
-
-.btn-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.btn-img:hover {
-    transform: scale(1.15);
-}
-
-.botoes-container {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-}
-
-/* ===== BOTÃO JOGO ===== */
-#btnJogo {
-    width: 100%;
-    max-width: 1100px; /* mantém grande, mas sem estourar */
-    height: auto;
-    border: none !important;
-    background: none !important;
-    display: flex;
-    margin: 0 auto;
-}
-
-
-#btnJogo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* ===== RESPONSIVO BTN JOGO ===== */
-@media (max-width: 900px) {
-    #btnJogo {
-        width: 95%;
-        height: auto;
+    footer {
+        font-size: 12px;
+        padding: 10px;
     }
-
-    #btnJogo img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* ===== RODAPÉ ===== */
-footer {
-    background-color: #3299CC;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 14px;
-    color: black;
 }
