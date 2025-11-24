@@ -1,13 +1,12 @@
-/* ======= AJUSTES GERAIS ======= */
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+
+html, body {
+    overflow-x: hidden;
 }
 
-img, iframe {
-    max-width: 100%;
-}
-
-/* ======= CABEÇALHO ======= */
+/* ===== CABEÇALHO ===== */
 header {
     padding: 0;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
@@ -29,10 +28,10 @@ header {
     margin: 0;
     font-size: 28px;
     color: black;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Anton', sans-serif; 
 }
 
-/* ======= NAVEGAÇÃO ======= */
+/* ===== NAVEGAÇÃO ===== */
 nav ul {
     display: flex;
     list-style: none;
@@ -55,139 +54,247 @@ button.inicio-btn {
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
-    gap: 8px;
+    transition: 0.2s;
 }
 
-/* ======= MASCOTE + TÍTULO ======= */
+button.inicio-btn:hover {
+    color: white;
+    background: #004aad;
+}
+
+/* ===== MASCOTE ===== */
 .mascote-container {
     display: flex;
-    flex-direction: row; /* SEMPRE LADO A LADO */
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    gap: 64px;
+    padding-left: 64px;
 }
 
 .logo-header {
-    width: 180px;
     height: 180px;
+    width: 180px;
+    object-fit: contain;
 }
 
-/* ======= TEXTOS ======= */
 .mascote-titulo {
     text-align: center;
     font-family: 'Anton', sans-serif;
     font-size: 30px;
+    color: #222;
+    font-weight: bold;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .mascote-texto-baixo {
     font-size: 25px;
-    max-width: 900px;
-    margin: 20px auto;
+    color: #333;
     text-align: center;
+    margin: 40px auto 0 auto;
+    max-width: 1000px;
+    line-height: 1.2;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* ===== CARROSSEL + BOTÃO ===== */
+.campanha-carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+    flex-wrap: wrap;
+}
+
+.carousel-container {
+    width: 100%;
+    max-width: 700px;
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.carousel-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-container img.active {
+    opacity: 1;
+}
+
+/* ===== BOTÃO-IMAGEM NO CANTO ===== */
+.img-btn-carrossel {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.img-btn-carrossel img {
+    width: 500px;
+    height: auto;
+    pointer-events: none;
+}
+
+
+.img-btn-carrossel:hover {
+    transform: scale(1.08);
+}
+
+/* ===== RESPONSIVIDADE DO BOTÃO ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .img-btn-carrossel img {
+        width: 350px;
+    }
+
+    .img-btn-carrossel {
+        top: -30px;
+        right: -30px;
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    .img-btn-carrossel {
+        position: relative;
+        top: 20px;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-btn-carrossel img {
+        width: 260px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .img-btn-carrossel img {
+        width: 210px;
+    }
+}
+
+/* ===== BLOCO CURVO ===== */
+.bloco-curvo {
+    background: #c4e6f2;
+    padding: 60px 20px 80px;
+    border-radius: 120px;
+    margin-bottom: 40px;
+}
+
+/* ===== TÍTULOS ===== */
+.titulo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.linha-decorativa {
+    width: 120px;
 }
 
 .titulo-secundario {
     font-family: 'Anton', sans-serif;
     font-size: 24px;
-    text-align: center;
+    color: #0074d9;
 }
 
+/* ===== TEXTOS ===== */
 .texto-descritivo {
     font-family: 'Open Sans', Arial, sans-serif;
     font-size: 18px;
+    color: black;
     text-align: center;
-    max-width: 900px;
     margin: 0 auto 40px auto;
+    max-width: 900px;
+    line-height: 1.6;
 }
 
-/* ======= CURVA ======= */
-.bloco-curvo {
-    background: #c4e6f2;
-    padding: 60px 20px;
-    border-radius: 50px;
-}
-
-/* ======= BOTÕES ======= */
-.botoes-container {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    flex-wrap: nowrap; /* NÃO QUEBRA */
-}
-
+/* ===== BOTÕES DE IMAGEM ===== */
 .btn-img {
-    width: 180px;
+    width: 200px;
+    height: 288px;
     transition: transform 0.2s;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.btn-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .btn-img:hover {
     transform: scale(1.15);
 }
 
-/* ======= CARROSSEL ======= */
-.carousel-container {
+.botoes-container {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* ===== BOTÃO JOGO ===== */
+#btnJogo {
     width: 100%;
-    max-width: 800px;
-    margin: 25px auto;
-    position: relative;
-    overflow: hidden;
+    max-width: 1100px; /* mantém grande, mas sem estourar */
+    height: auto;
+    border: none !important;
+    background: none !important;
+    display: flex;
+    margin: 0 auto;
 }
 
-/* ===========================
-     RESPONSIVIDADE AJUSTADA
-=========================== */
 
-/* TABLETS */
-@media (max-width: 1024px) {
-    .logo-header { width: 160px; height: 160px; }
-    .btn-img { width: 160px; }
-    .mascote-texto-baixo { font-size: 22px; }
+#btnJogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-/* CELULARES MÉDIOS */
-@media (max-width: 768px) {
-    .logo-header { width: 120px; height: 120px; }
-    .btn-img { width: 140px; }
-
-    .mascote-container {
-        gap: 15px;
-        padding: 10px;
+/* ===== RESPONSIVO BTN JOGO ===== */
+@media (max-width: 900px) {
+    #btnJogo {
+        width: 95%;
+        height: auto;
     }
 
-    .logo-titulo { font-size: 26px; }
-    .mascote-titulo { font-size: 24px; }
-    .mascote-texto-baixo { font-size: 20px; }
-}
-
-/* CELULARES PEQUENOS */
-@media (max-width: 480px) {
-    .logo-header {
-        width: 90px !important;
-        height: 90px !important;
-    }
-
-    .btn-img { width: 120px; }
-
-    .mascote-container {
-        gap: 10px;
-        padding: 5px;
-    }
-
-    .logo-titulo { font-size: 22px; }
-    .mascote-titulo { font-size: 20px; }
-    .mascote-texto-baixo { font-size: 18px; }
-
-    /* GARANTE QUE O CARROSSEL APAREÇA */
-    .carousel-container {
-        max-width: 100%;
-        width: 100%;
-        margin: 15px auto;
-        overflow: visible;
-    }
-
-    .carousel-container img {
+    #btnJogo img {
         width: 100%;
         height: auto;
     }
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: #3299CC;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: black;
 }
